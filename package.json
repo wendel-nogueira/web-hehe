@@ -1,0 +1,38 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Wendel Nogueira <43501645+wendel-nogueira@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "runbuild": "npm run build && npm start",
+    "startdev": "ts-node src/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --exit-child --watch src src/server.ts"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "class-validator": "^0.14.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.12.1",
+    "reflect-metadata": "^0.1.13",
+    "uuid": "^9.0.0",
+    "vercel": "^28.9.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "^4.7.1",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.15",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/uuid": "^9.0.0",
+    "prisma": "^4.7.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.4"
+  }
+}
