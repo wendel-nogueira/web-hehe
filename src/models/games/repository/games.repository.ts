@@ -20,6 +20,24 @@ export class GamesRepository implements IGamesRepository {
         });
     }
 
+    async findAllWithoutImages(): Promise<Game[]> {
+        return this.prisma.game.findMany({
+            select: {
+                id: true,
+                title: true,
+                genre: true,
+                developer: true,
+                console: true,
+                rating: true,
+                createdAt: true,
+                updatedAt: true
+            },
+            orderBy: {
+                createdAt: 'desc'
+            }
+        });
+    }
+
     async findOne(id: string): Promise<any> {
         return this.prisma.game.findUnique({
             where: {

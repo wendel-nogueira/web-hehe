@@ -12,6 +12,13 @@ export class GamesController {
         return res.status(200).json(games);
     }
 
+    async findAllWithoutImages(req: Request, res: Response, next: NextFunction) {
+        const gamesService = new GamesService();
+        const games = await gamesService.findAllWithoutImages();
+
+        return res.status(200).json(games);
+    }
+
     async findOne(req: Request, res: Response, next: NextFunction) {
         const gamesService = new GamesService();
         const { id } = req.params;

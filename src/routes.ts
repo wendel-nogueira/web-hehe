@@ -33,6 +33,7 @@ router.get('/games/developer/:developer', gamesController.findByDeveloper);
 router.get('/games/top/:console', gamesController.findTop);
 router.get('/games/developers/all', gamesController.findAllDevelopers);
 router.get('/games/titles/all', gamesController.findAllTitles);
+router.get('/games/noimage/all', gamesController.findAllWithoutImages);
 router.post('/games', gamesController.create);
 router.patch('/games/:id', gamesController.update);
 router.delete('/games/:id', gamesController.remove);

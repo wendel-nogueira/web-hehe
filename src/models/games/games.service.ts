@@ -16,6 +16,10 @@ export class GamesService {
         return await this.gamesRepository.findAll();
     }
 
+    async findAllWithoutImages() {
+        return await this.gamesRepository.findAllWithoutImages();
+    }
+
     async findOne(id: string) {
         if (!ObjectId.isValid(id)) {
             throw new Error('Invalid ID');
